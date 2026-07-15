@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup - Players</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="players.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo"><h1><img src="images/WC26_Logo.avif" alt=""></h1></div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stats.html">Stats</a></li>
+                    <li><a href="teams.html">Teams</a></li>
+                    <li><a href="balls.html">Balls</a></li>
+                    <li><a href="players.html" class="active">Players</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Legendary Players</h2>
+        <p class="section-subtitle">Click a card to flip it and see the player's biggest achievement.</p>
+
+        <div class="search-box">
+            <input type="text" id="playerSearch" placeholder="Search for a player...">
+        </div>
+
+        <p>Filter by country:</p>
+        <div class="country-filters">
+            <button class="country-btn active" data-country="all">Show All</button>
+            <button class="country-btn" data-country="Brazil">Brazil </button>
+            <button class="country-btn" data-country="Argentina">Argentina </button>
+            <button class="country-btn" data-country="France">France </button>
+            <button class="country-btn" data-country="Germany">Germany </button>
+            <button class="country-btn" data-country="England">England</button>
+            <button class="country-btn" data-country="Portugal">Portugal</button>
+        </div>
+
+        <div class="players-grid">
+            <div class="player-card reveal" data-country="Brazil">
+                <div class="player-card-inner">
+                    <div class="player-card-front">
+                        <h3>Pelé</h3>
+                        <p><strong>Country:</strong> Brazil</p>
+                    </div>
+                    <div class="player-card-back">
+                        <h4>Achievement</h4>
+                        <p>Only player with 3 World Cup trophies (1958, 1962, 1970).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="player-card reveal" data-country="Argentina">
+                <div class="player-card-inner">
+                    <div class="player-card-front">
+                        <h3>Diego Maradona</h3>
+                        <p><strong>Country:</strong> Argentina</p>
+                    </div>
+                    <div class="player-card-back">
+                        <h4>Achievement</h4>
+                        <p>Led Argentina to victory in 1986, including the "Hand of God" and "Goal of the Century."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="player-card reveal" data-country="Argentina">
+                <div class="player-card-inner">
+                    <div class="player-card-front">
+                        <h3>Lionel Messi <span class="badge badge-live">Active 2026</span></h3>
+                        <p><strong>Country:</strong> Argentina    </p>
+                    </div>
+                    <div class="player-card-back">
+                        <h4>Achievement</h4>
+                        <p>Golden Ball winner and 2022 Champion. Tied for the 2026 Golden Boot lead with 8 goals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="player-card reveal" data-country="Brazil">
+                <div class="player-card-inner">
+                    <div class="player-card-front">
+                        <h3>Ronaldo Nazário</h3>
+                        <p><strong>Country:</strong> Brazil</p>
+                    </div>
+                    <div class="player-card-back">
+                        <h4>Achievement</h4>
+                        <p>All-time World Cup top scorer for Brazil with 15 goals; 2002 champion and top scorer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="player-card reveal" data-country="France">
+                <div class="player-card-inner">
+                    <div class="player-card-front">
+                        <h3>Zinedine Zidane</h3>
+                        <p><strong>Country:</strong> France</p>
+                    </div>
+                    <div class="player-card-back">
+                        <h4>Achievement</h4>
+                        <p>Scored twice in the 1998 final to bring France its first World Cup title.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="player-card reveal" data-country="Germany">
+                <div class="player-card-inner">
+                    <div class="player-card-front">
+                        <h3>Franz Beckenbauer</h3>
+                        <p><strong>Country:</strong> Germany</p>
+                    </div>
+                    <div class="player-card-back">
+                        <h4>Achievement</h4>
+                        <p>Won the World Cup as both captain (1974) and head coach (1990) - a rare double.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="player-card reveal" data-country="France">
+                <div class="player-card-inner">
+                    <div class="player-card-front">
+                        <h3>Kylian Mbappé <span class="badge badge-live">Active 2026</span></h3>
+                        <p><strong>Country:</strong> France</p>
+                    </div>
+                    <div class="player-card-back">
+                        <h4>Achievement</h4>
+                        <p>2018 champion; leading the 2026 Golden Boot race with 8 goals so far.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="player-card reveal" data-country="England">
+                <div class="player-card-inner">
+                    <div class="player-card-front">
+                        <h3>Harry Kane <span class="badge badge-live">Active 2026</span></h3>
+                        <p><strong>Country:</strong> England </p>
+                    </div>
+                    <div class="player-card-back">
+                        <h4>Achievement</h4>
+                        <p>England's captain, chasing the country's first title since 1966 at the 2026 semifinals.</p>
+                    </div>
+                </div>
+            </div>
+             
+            <div class="player-card reveal" data-country="Portugal">
+    <div class="player-card-inner">
+        <div class="player-card-front">
+            <h3>Cristiano Ronaldo <span class="badge badge-live">Active 2026</span></h3>
+            <p><strong>Country:</strong> Portugal</p>
+          </div>
+             <div class="player-card-back">
+                <h4>Achievement</h4>
+                <p>Five-time Ballon d'Or winner and the most prolific goalscorer in the history of international and professional football.</p>
+            </div>
+        </div>
+   </div> 
+
+
+
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WorldCup. All rights reserved.</p>
+        <p class="footer-tagline">Built for football fans, one fact at a time.</p>
+    </footer>
+
+   
+
+    <script src="site.js"></script>
+    <script src="players.js"></script>
+</body>
+</html>

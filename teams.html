@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorldCup-Teams</title>
+    <link rel="stylesheet" href="teams.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="logo"><h1><img src="images/WC26_Logo.avif" alt=""></h1></div>
+       <!--<div class="logo"><h1>WorldCup</h1></div>-->
+        <!--<div class="gif"><img src="images/shakira-namste.gif" alt=""></div>-->
+        <nav>
+          <ul id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stats.html">Stats</a></li>
+            <li><a href="teams.html" class="active">Teams</a></li>
+            <li><a href="balls.html">Balls</a></li>
+            <li><a href="players.html">Players</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            🌙
+          </button>
+          <button
+            id="hamburger"
+            class="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <h2>World Cup Winners</h2>
+      <p class="section-subtitle">
+        Every nation that has ever lifted the trophy. Teams still alive in the
+        2026 semifinals are flagged 🔥.
+      </p>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="4">4+ Titles</button>
+        <button class="filter-btn" data-filter="3">3 Titles</button>
+        <button class="filter-btn" data-filter="2">2 Titles</button>
+        <button class="filter-btn" data-filter="1">1 Title</button>
+        
+      </div>
+
+      <div class="teams-grid" id="teamsContainer">
+        <div class="team-card reveal" data-titles="5">
+          <h3>Brazil 🇧🇷</h3>
+          <p><strong>Titles:</strong> 5 (1958, 1962, 1970, 1994, 2002)</p>
+          <p><strong>Top Scorer:</strong> Ronaldo (15 goals)</p>
+        </div>
+        <div class="team-card reveal" data-titles="4">
+          <h3>Germany 🇩🇪</h3>
+          <p><strong>Titles:</strong> 4 (1954, 1974, 1990, 2014)</p>
+          <p><strong>Top Scorer:</strong> Miroslav Klose (16 goals)</p>
+        </div>
+        <div class="team-card reveal" data-titles="4">
+          <h3>Italy 🇮🇹</h3>
+          <p><strong>Titles:</strong> 4 (1934, 1938, 1982, 2006)</p>
+          <p><strong>Top Scorer:</strong> Roberto Baggio (9 goals)</p>
+        </div>
+        <div class="team-card reveal semifinalist" data-titles="3">
+          <span class="ribbon">🔥 2026 Semifinalist</span>
+          <h3>Argentina 🇦🇷</h3>
+          <p><strong>Titles:</strong> 3 (1978, 1986, 2022)</p>
+          <p><strong>Top Scorer:</strong> Lionel Messi (21 goals)</p>
+        </div>
+        <div class="team-card reveal semifinalist" data-titles="2">
+          <span class="ribbon">🔥 2026 Semifinalist</span>
+          <h3>France 🇫🇷</h3>
+          <p><strong>Titles:</strong> 2 (1998, 2018)</p>
+          <p><strong>Top Scorer:</strong> Kylian Mbappé (20 goals)</p>
+        </div>
+        <div class="team-card reveal" data-titles="2">
+          <h3>Uruguay 🇺🇾</h3>
+          <p><strong>Titles:</strong> 2 (1930, 1950)</p>
+          <p><strong>Top Scorer:</strong> Luis Suárez (7 goals)</p>
+        </div>
+        <div class="team-card reveal semifinalist" data-titles="1">
+          <span class="ribbon">🔥 2026 Semifinalist</span>
+          <h3>England 🏴󠁧󠁢󠁥󠁮󠁧󠁿ص و </h3>
+          <p><strong>Titles:</strong> 1 (1966)</p>
+          <p><strong>Top Scorer:</strong> Harry Kane (14 goals)</p>
+        </div>
+        <div class="team-card reveal semifinalist" data-titles="1">
+          <span class="ribbon">🔥 2026 Semifinalist</span>
+          <h3>Spain 🇪🇸</h3>
+          <p><strong>Titles:</strong> 1 (2010)</p>
+          <p><strong>Top Scorer:</strong> David Villa (5 goals)</p>
+        </div>
+      </div>
+      <section class="host-nations reveal">
+        <h2>2026 Co-Host Nations</h2>
+        <p class="section-subtitle">
+          Canada, Mexico and the USA qualified automatically as hosts of the
+          2026 tournament.
+        </p>
+        <div class="host-grid">
+          <div class="host-card">
+            <h4>🇺🇸 United States</h4>
+            <p>
+              11 host cities, including the final at MetLife Stadium, New
+              Jersey.
+            </p>
+          </div>
+          <div class="host-card">
+            <h4>🇲🇽 Mexico</h4>
+            <p>
+              3 host cities. First country to host or co-host the World Cup
+              three times (1970, 1986, 2026).
+            </p>
+          </div>
+          <div class="host-card">
+            <h4>🇨🇦 Canada</h4>
+            <p>
+              2 host cities: Toronto and Vancouver. Canada's first time hosting
+              the tournament.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+     <footer>
+        <p>&copy; 2026 WorldCup. All rights reserved.</p>
+        <p class="footer-tagline">Built for football fans, one fact at a time.</p>
+    </footer>
+<script src="teams.js"></script>
+  </body>
+</html>

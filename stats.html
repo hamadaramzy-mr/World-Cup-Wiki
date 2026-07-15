@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup - Stats</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="stats.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo"><h1><img src="images/WC26_Logo.avif" alt=""></h1></div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stats.html" class="active">Stats</a></li>
+                    <li><a href="teams.html">Teams</a></li>
+                    <li><a href="balls.html">Balls</a></li>
+                    <li><a href="players.html">Players</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>World Cup Statistics</h2>
+        <p class="section-subtitle">Browse historical records, or check the live 2026 Golden Boot race. Click any column header to sort.</p>
+
+        <div class="search-box">
+            <input type="text" id="statsSearch" placeholder="Search for player or country...">
+        </div>
+
+        <!-- ===== Tabs ===== -->
+        <div class="stats-tabs">
+            <button class="tab-btn active" data-tab="tab-alltime">All-Time Top Scorers</button>
+            <button class="tab-btn" data-tab="tab-live">🔴 2026 Golden Boot (Live)</button>
+            <button class="tab-btn" data-tab="tab-appearances">Most Appearances</button>
+            <button class="tab-btn" data-tab="tab-hosts">2026 Host Cities</button>
+        </div>
+
+        <!-- ===== All-time top scorers ===== -->
+        <div id="tab-alltime" class="tab-panel active reveal">
+            <table id="scorersTable">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Country</th>
+                        <th>Goals</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Lionel Messi</td><td>Argentina</td><td>21</td></tr>
+                    <tr><td>Kylian Mbappé</td><td>France</td><td>20</td></tr>
+                    <tr><td>Miroslav Klose</td><td>Germany</td><td>16</td></tr>
+                    <tr><td>Ronaldo</td><td>Brazil</td><td>15</td></tr>
+                    <tr><td>Gerd Müller</td><td>Germany</td><td>14</td></tr>
+                    <tr><td>Just Fontaine</td><td>France</td><td>13</td></tr>
+                    <tr><td>Pelé</td><td>Brazil</td><td>12</td></tr>
+                    <tr><td>Sándor Kocsis</td><td>Hungary</td><td>11</td></tr>
+                    <tr><td>Jürgen Klinsmann</td><td>Germany</td><td>11</td></tr>
+                    <tr><td>Diego Maradona</td><td>Argentina</td><td>8</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ===== Live 2026 golden boot ===== -->
+        <div id="tab-live" class="tab-panel reveal">
+            <p class="live-note"><span class="badge badge-live">Live</span> Updated through the 2026 semifinal round.</p>
+            <table id="liveTable">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Country</th>
+                        <th>Goals</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Lionel Messi</td><td>Argentina</td><td>21</td></tr>
+                    <tr><td>Kylian Mbappé</td><td>France</td><td>20</td></tr>
+                    <tr><td>Harry Kane</td><td>England</td><td>6</td></tr>
+                    <tr><td>Jude Bellingham</td><td>England</td><td>6</td></tr>
+                    <tr><td>Ousmane Dembélé</td><td>France</td><td>5</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ===== Most appearances ===== -->
+        <div id="tab-appearances" class="tab-panel reveal">
+            <table id="appearancesTable">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Country</th>
+                        <th>Tournaments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Lionel Messi</td><td>Argentina</td><td>6</td></tr>
+                    <tr><td>Cristiano Ronaldo</td><td>Portugal</td><td>6</td></tr>
+                    <tr><td>Lothar Matthäus</td><td>Germany</td><td>5</td></tr>
+                    <tr><td>Rafael Márquez</td><td>Mexico</td><td>5</td></tr>
+                    <tr><td>Gianluigi Buffon</td><td>Italy</td><td>4</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ===== 2026 Host cities ===== -->
+        <div id="tab-hosts" class="tab-panel reveal">
+            <table id="hostsTable">
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Notable Match</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>New York/New Jersey</td><td>USA</td><td>Final - July 19</td></tr>
+                    <tr><td>Atlanta</td><td>USA</td><td>Semifinal - Argentina vs England</td></tr>
+                    <tr><td>Arlington (Dallas)</td><td>USA</td><td>Semifinal - France vs Spain</td></tr>
+                    <tr><td>Miami Gardens</td><td>USA</td><td>Third-place match</td></tr>
+                    <tr><td>Mexico City</td><td>Mexico</td><td>Opening match</td></tr>
+                    <tr><td>Toronto</td><td>Canada</td><td>Group stage</td></tr>
+                    <tr><td>Vancouver</td><td>Canada</td><td>Group stage</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WorldCup. All rights reserved.</p>
+        <p class="footer-tagline">Built for football fans, one fact at a time.</p>
+    </footer>
+
+    
+
+    <script src="site.js"></script>
+    <script src="stats.js"></script>
+</body>
+</html>

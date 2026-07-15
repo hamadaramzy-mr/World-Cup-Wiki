@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup - Balls</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="balls.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+           <div class="logo"><h1><img src="images/WC26_Logo.avif" alt=""></h1></div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stats.html">Stats</a></li>
+                    <li><a href="teams.html">Teams</a></li>
+                    <li><a href="balls.html" class="active">Balls</a></li>
+                    <li><a href="players.html">Players</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Official Match Balls Evolution</h2>
+        <p class="section-subtitle">From the leather balls of the 1970s to the 2026 Trionda. Filter by era, and like your favorite.</p>
+
+        <div class="filter-buttons era-filters">
+            <button class="era-btn active" data-era="all">All Eras</button>
+            <button class="era-btn" data-era="1970s-80s">1970s-80s</button>
+            <button class="era-btn" data-era="1990s-2000s">1990s-2000s</button>
+            <button class="era-btn" data-era="2010s-2020s">2010s-2020s</button>
+        </div>
+
+        <div class="balls-grid">
+            <div class="ball-card reveal" data-era="1970s-80s">
+                <span class="era-tag">1970</span>
+                <div class="ball-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXoTn5ArUquPKW-0Sdu0b_7-zsZBCfmin5XR0f71IQuA&s" alt="image">
+                </div>
+                <h3>Telstar</h3>
+                <p>The iconic black and white leather ball introduced for the television era.</p>
+                <button class="vote-btn" data-ball="telstar">❤️ Like (<span class="vote-count" id="telstar-votes">0</span>)</button>
+            </div>
+            <div class="ball-card reveal" data-era="1970s-80s">
+                <span class="era-tag">1982</span>
+                <div class="ball-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuC2UbF-RyP_htXZg5ZiguD2tH_X7pKfd3r3LtI4rIxA&s=10" alt="">
+                </div>
+                <h3>Tango España</h3>
+                <p>The last all-leather World Cup ball, with a water-resistant coating for rainy conditions.</p>
+                <button class="vote-btn" data-ball="tango">❤️ Like (<span class="vote-count" id="tango-votes">0</span>)</button>
+            </div>
+            <div class="ball-card reveal" data-era="1970s-80s">
+                <span class="era-tag">1986</span>
+                <div class="ball-card-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Exposici%C3%B3n_%E2%80%9C%C2%BFDe_qu%C3%A9_color_pinta_el_verde%3F_-_El_Colegio_Nacional_-_08.jpg/500px-Exposici%C3%B3n_%E2%80%9C%C2%BFDe_qu%C3%A9_color_pinta_el_verde%3F_-_El_Colegio_Nacional_-_08.jpg" alt="image">
+                </div>
+                <h3>Azteca</h3>
+                <p>The first fully synthetic World Cup ball, designed to hold up in Mexico's varied climate.</p>
+                <button class="vote-btn" data-ball="azteca">❤️ Like (<span class="vote-count" id="azteca-votes">0</span>)</button>
+            </div>
+            <div class="ball-card reveal" data-era="1990s-2000s">
+                <span class="era-tag">1994</span>
+                <div class="ball-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4gmN93jjDFIgov01uEQpNW-XER0regXAfhvitR7l1rw&s=10" alt="image">
+                </div>
+                <h3>Questra</h3>
+                <p>Used a syntactic foam layer to improve speed and control on the pitch.</p>
+                <button class="vote-btn" data-ball="questra">❤️ Like (<span class="vote-count" id="questra-votes">0</span>)</button>
+            </div>
+            <div class="ball-card reveal" data-era="1990s-2000s">
+                <span class="era-tag">2002</span>
+                <div class="ball-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb04S4G6gKAmEmgk85BmMGFxyPK46NfUNklfwWBJyikg&s" alt="image">
+                </div>
+                <h3>Fevernova</h3>
+                <p>A radical, colorful redesign for the first World Cup held in Asia.</p>
+                <button class="vote-btn" data-ball="fevernova">❤️ Like (<span class="vote-count" id="fevernova-votes">0</span>)</button>
+            </div>
+            <div class="ball-card reveal" data-era="1990s-2000s">
+                <span class="era-tag">2006</span>
+                <div class="ball-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjhrEjDgzF8yfhB3r2coPDF00esKEgmpn8GSjoHiYmAw&s=10" alt="image">
+                </div>
+                <h3>Teamgeist</h3>
+                <p>Reduced panel count improved roundness and consistency in flight.</p>
+                <button class="vote-btn" data-ball="teamgeist">❤️ Like (<span class="vote-count" id="teamgeist-votes">0</span>)</button>
+            </div>
+            <div class="ball-card reveal" data-era="2010s-2020s">
+                <span class="era-tag">2010</span>
+                <div class="ball-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRooHNiPgTcwo8BOmQ6cIPKQfpdGGvtmEUgQofOUwTJIw&s" alt="image">
+                </div>
+                <h3>Jabulani</h3>
+                <p>Known for its speed and unpredictable, curving flight path.</p>
+                <button class="vote-btn" data-ball="jabulani">❤️ Like (<span class="vote-count" id="jabulani-votes">0</span>)</button>
+            </div>
+            <div class="ball-card reveal" data-era="2010s-2020s">
+                <span class="era-tag">2014</span>
+                <div class="ball-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBQZ9mXdaZVvdVzQlE94tkze_1KN3RMt85v4t7TFRueA&s=10" alt="image">
+                </div>
+                <h3>Brazuca</h3>
+                <p>Six-panel design praised by players for its stability and grip.</p>
+                <button class="vote-btn" data-ball="brazuca">❤️ Like (<span class="vote-count" id="brazuca-votes">0</span>)</button>
+            </div>
+            <div class="ball-card reveal" data-era="2010s-2020s">
+                <span class="era-tag">2018</span>
+                <div class="ball-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy43rjlMugfmXw3RT2r69S8f6O3ZEAN8BsIrY2Q6hUsw&s" alt="image">
+                </div>
+                <h3>Telstar 18</h3>
+                <p>A modern nod to the original 1970 Telstar, with an embedded NFC chip.</p>
+                <button class="vote-btn" data-ball="telstar18">❤️ Like (<span class="vote-count" id="telstar18-votes">0</span>)</button>
+            </div>
+            <div class="ball-card reveal" data-era="2010s-2020s">
+                <span class="era-tag">2022</span>
+                <div class="ball-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO-YpTE4N6LYOKC0MKB6imx9W9MMqMBTHIWLlqN-RoKg&s" alt="image">
+                </div>
+                <h3>Al Rihla</h3>
+                <p>The fastest World Cup ball ever tested, built with connected ball technology for VAR.</p>
+                <button class="vote-btn" data-ball="alrihla">❤️ Like (<span class="vote-count" id="alrihla-votes">0</span>)</button>
+            </div>
+            <div class="ball-card reveal" data-era="2010s-2020s">
+                <span class="era-tag live">2026</span>
+                <div class="ball-card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYdVfsjHfLr4QvxGECr9YmgpqObYRYmeRc-RjOIdmmeA&s" alt="image">
+                </div>
+                <h3>Trionda <span class="badge badge-live">Current</span></h3>
+                <p>The official ball of the 2026 tournament, its name meaning "three waves" for the three co-host nations.</p>
+                <button class="vote-btn" data-ball="trionda">❤️ Like (<span class="vote-count" id="trionda-votes">0</span>)</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WorldCup. All rights reserved.</p>
+        <p class="footer-tagline">Built for football fans, one fact at a time.</p>
+    </footer>
+
+   
+
+    <script src="site.js"></script>
+    <script src="balls.js"></script>
+</body>
+</html>

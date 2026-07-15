@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #0f2027;
+    --secondary-color: #203a43;
+    --accent-color: #8a2387;
+    --gold-color: #f39c12;
+    --light-color: #f4f7f6;
+    --dark-color: #1a1a1a;
+    --card-bg: #ffffff;
+    --text-muted: #5a6b6e;
+    --live-color: #e74c3c;
+    --success-color: #27ae60;
+    --border-color: #e2e6e5;
+    --shadow-sm: 0 4px 10px rgba(0,0,0,0.06);
+    --shadow-md: 0 10px 25px rgba(0,0,0,0.14);
+    --transition-fast: 0.2s ease;
+    --transition-med: 0.35s ease;
+}
+
+.filter-buttons.era-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.era-btn {
+    padding: 10px 20px;
+    border: none;
+    background: var(--border-color);
+    color: var(--dark-color);
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    /* transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast); */
+}
+
+.era-btn:hover {
+    transform: translateY(-2px);
+}
+
+.era-btn.active {
+    background-color: var(--gold-color);
+    color: var(--dark-color);
+}
+
+.balls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.ball-card {
+    
+    position: relative;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ball-card-img{
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-radius: 1rem;
+}
+.ball-card-img img {
+    height: 300px;
+
+}
+
+.ball-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.era-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--border-color);
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.era-tag.live {
+    background: var(--live-color);
+    color: #fff;
+}
+
+.ball-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+[data-theme="dark"] .ball-card h3 {
+    color: var(--gold-color);
+}
+
+.vote-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.vote-btn:hover {
+    background-color: #c0392b;
+}
+
+.vote-btn.pulse {
+    animation: votePulse 0.3s ease;
+}
+
+@keyframes votePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+h1{
+    color: gold;
+}
+h1 img{
+    width: 50px;
+    height: auto;
+    border-radius: 6px;
+}
