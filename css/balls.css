@@ -133,3 +133,29 @@
     50% { transform: scale(1.15); }
     100% { transform: scale(1); }
 }
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+
+    nav ul#navMenu {
+        position: fixed;
+        top: 68px;
+        right: -100%;
+        flex-direction: column;
+        background: var(--secondary-color);
+        width: 220px;
+        padding: 20px;
+        gap: 4px;
+        border-radius: 0 0 0 12px;
+        box-shadow: var(--shadow-md);
+        transition: right var(--transition-med);
+    }
+
+    nav ul#navMenu.open {
+        right: 0;
+    }
+
+    nav ul#navMenu li {
+        margin: 10px 0;
+    }
+}
