@@ -1,0 +1,135 @@
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.logo h1 img {
+    display: block;
+    width: 50px;
+    height: auto;
+    margin: 0;
+    border: none;
+    border-radius: 6px;
+}
+
+/* كود انقلاب اللوجو أفقياً من اليمين لليسار */
+.logo img {
+    animation: flipHorizontally 3s ease-in-out infinite;
+    /* هذا السطر يضمن أن اللوجو يظل في منتصف مكانه أثناء الانقلاب */
+    transform-origin: center; 
+}
+
+@keyframes flipHorizontally {
+    0%, 100% {
+        /* الوضع الطبيعي (البدء والنهاية) */
+        transform: scaleX(1);
+    }
+    50% {
+        /* الانقلاب الكامل عند منتصف المدة */
+        transform: scaleX(-1);
+    }
+}
+.filter-buttons.era-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.era-btn {
+    padding: 10px 20px;
+    border: none;
+    background: var(--border-color);
+    color: var(--dark-color);
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.era-btn:hover {
+    transform: translateY(-2px);
+}
+
+.era-btn.active {
+    background-color: var(--gold-color);
+    color: #1a1a1a;
+}
+
+.balls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.ball-card {
+    position: relative;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ball-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.era-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--border-color);
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.era-tag.live {
+    background: var(--live-color);
+    color: #fff;
+}
+
+.ball-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+[data-theme="dark"] .ball-card h3 {
+    color: var(--gold-color);
+}
+
+.vote-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.vote-btn:hover {
+    background-color: #c0392b;
+}
+
+.vote-btn.pulse {
+    animation: votePulse 0.3s ease;
+}
+
+@keyframes votePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore World Cup finals, groups, results and knockout brackets.">
+  <title>WorldCupWiki | World Cup History</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      
+            <div class="logo">
+                <h1>
+                    <img src="images/WC26_Logo.avif"
+                         alt="FIFA World Cup 2026 Logo">
+                </h1>
+            </div>
+      <nav>
+        <ul id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="stats.html">Stats</a></li>
+                    <li><a href="teams.html">Teams</a></li>
+                    <li><a href="balls.html">Balls</a></li>
+                    <li><a href="players.html">Players</a></li>
+                </ul>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero-slider" aria-label="World Cup featured images">
+      <div class="hero-slide slide-one active">
+        <div class="hero-content"><span class="eyebrow">THE WORLD'S GAME</span><h2>Every World Cup Has a Story.</h2><p>Relive the goals, the finals, and the moments that made football history.</p><a class="primary-btn" href="#history">Explore the finals</a></div>
+      </div>
+      <div class="hero-slide slide-two">
+        <div class="hero-content"><span class="eyebrow">NATIONAL PRIDE</span><h2>Legends Are Made Here.</h2><p>From unforgettable goals to champions lifting the trophy.</p><a class="primary-btn" href="#bracket">View the bracket</a></div>
+      </div>
+      <div class="hero-slide slide-three">
+        <div class="hero-content"><span class="eyebrow">ONE TROPHY</span><h2>Moments That Unite the World.</h2><p>Browse finals and follow the path from groups to the final.</p><a class="primary-btn" href="#groups">See the groups</a></div>
+      </div>
+      <button class="slider-arrow prev" id="slidePrev" aria-label="Previous slide">‹</button>
+      <button class="slider-arrow next" id="slideNext" aria-label="Next slide">›</button>
+      <div class="slider-dots" id="sliderDots" aria-label="Choose slide"></div>
+      <div class="slider-progress"><span id="sliderProgress"></span></div>
+    </section>
+
+    <section class="page-section intro">
+      <span class="section-kicker">WELCOME TO WORLDCUPWIKI</span>
+      <h2>Football history, all in one place</h2>
+      <p>Explore the finals from 2002 to 2026, check the latest tournament groups, and follow the knockout path to the trophy.</p>
+    </section>
+
+    <section class="page-section" id="history">
+      <div class="section-heading finals-heading"><div><span class="section-kicker">THE BIGGEST MATCH</span><h2>World Cup Finals</h2><p>Championship matches from 2002–2026.</p></div>
+        <div class="finals-heading-right">
+          <div class="rotating-trophy" role="img" aria-label="Rotating World Cup trophy">🏆</div>
+          <input id="finalSearch" class="search-input" type="search" placeholder="Search a team or year…" aria-label="Search finals">
+        </div>
+      </div>
+      <div class="finals-grid" id="finalsGrid">
+        <article class="final-card" data-search="2002 brazil germany ronaldo">
+          <img src="https://i.ytimg.com/vi/xB_ZTWWhnPA/maxresdefault.jpg" alt="Football stadium during a match" loading="lazy">
+          <div class="final-card-body"><span class="year-tag">2002 · Japan & South Korea</span><h3>Brazil vs Germany</h3><div class="score-line"><strong>Brazil 2–0 Germany</strong></div><p><b>Goals:</b> Ronaldo 67', 79'</p><p class="winner">🏆 Champion: Brazil</p></div>
+        </article>
+        <article class="final-card" data-search="2006 italy france zidane penalties">
+          <img src="https://c8.alamy.com/comp/G9E0N3/soccer-2006-fifa-world-cup-germany-final-italy-v-france-olympiastadion-G9E0N3.jpg" alt="Football pitch and stadium" loading="lazy">
+          <div class="final-card-body"><span class="year-tag">2006 · Germany</span><h3>Italy vs France</h3><div class="score-line"><strong>1–1 (Italy won 5–3 on penalties)</strong></div><p><b>Goals:</b> Materazzi 19'; Zidane 7' (pen.)</p><p class="winner">🏆 Champion: Italy</p></div>
+        </article>
+        <article class="final-card" data-search="2010 spain netherlands iniesta">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.TDhoIM_3bj4JNkGbEtHGpwHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Football players on a pitch" loading="lazy">
+          <div class="final-card-body"><span class="year-tag">2010 · South Africa</span><h3>Spain vs Netherlands</h3><div class="score-line"><strong>Spain 1–0 Netherlands (AET)</strong></div><p><b>Goal:</b> Andrés Iniesta 116'</p><p class="winner">🏆 Champion: Spain</p></div>
+        </article>
+        <article class="final-card" data-search="2014 germany argentina gotze">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.FoaHvwpR9dSxe1J8r5fVHAHaFT?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="World Cup football stadium" loading="lazy">
+          <div class="final-card-body"><span class="year-tag">2014 · Brazil</span><h3>Germany vs Argentina</h3><div class="score-line"><strong>Germany 1–0 Argentina (AET)</strong></div><p><b>Goal:</b> Mario Götze 113'</p><p class="winner">🏆 Champion: Germany</p></div>
+        </article>
+        <article class="final-card" data-search="2018 france croatia mbappe">
+          <img src="https://media.gettyimages.com/id/999544758/photo/france-v-croatia-2018-fifa-world-cup-russia-final.jpg?s=1024x1024&w=gi&k=20&c=RUrjbkei_cqTF4nHiybYR1NQX2glL4lelOgvr3dxtZw=" alt="Football stadium lights" loading="lazy">
+          <div class="final-card-body"><span class="year-tag">2018 · Russia</span><h3>France vs Croatia</h3><div class="score-line"><strong>France 4–2 Croatia</strong></div><p><b>Goals:</b> Mandžukić (og), Griezmann, Pogba, Mbappé; Perišić, Mandžukić</p><p class="winner">🏆 Champion: France</p></div>
+        </article>
+        <article class="final-card" data-search="2022 argentina france messi mbappe penalties">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.x3wn-608O90u-bR_lkmHfgHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Football stadium with spectators" loading="lazy">
+          <div class="final-card-body"><span class="year-tag">2022 · Qatar</span><h3>Argentina vs France</h3><div class="score-line"><strong>3–3 (Argentina won 4–2 on penalties)</strong></div><p><b>Goals:</b> Messi 23' (pen.), 108'; Di María 36'; Mbappé 80' (pen.), 81', 118' (pen.)</p><p class="winner">🏆 Champion: Argentina</p></div>
+        </article>
+        <article class="final-card" data-search="2026 spain argentina ferran torres">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.kTP7Esye8Bayugjphn-p2QHaEI?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Football pitch under stadium lights" loading="lazy">
+          <div class="final-card-body"><span class="year-tag">2026 · Canada, Mexico & USA</span><h3>Spain vs Argentina</h3><div class="score-line"><strong>Spain 1–0 Argentina (AET)</strong></div><p><b>Goal:</b> Ferran Torres 106'</p><p class="winner">🏆 Champion: Spain</p></div>
+        </article>
+      </div>
+      <p id="noResults" class="empty-message" hidden>No finals match your search. Try another team or year.</p>
+    </section>
+
+    <section class="page-section" id="groups">
+      <div class="section-heading"><div><span class="section-kicker">2026 TOURNAMENT</span><h2>Group Stage</h2><p>Choose a group to view its teams. Top teams progressed to the knockout rounds.</p></div>
+        <select id="groupFilter" class="search-input" aria-label="Filter groups"><option value="all">All groups</option></select>
+      </div>
+      <div class="groups-grid" id="groupsGrid"></div>
+      <p class="small-note">Group team lists are included as a front-end example. Update them if you want to publish a fully verified tournament database.</p>
+    </section>
+
+    <section class="page-section" id="bracket">
+      <div class="section-heading"><div><span class="section-kicker">THE ROAD TO GLORY</span><h2>2026 Knockout Bracket</h2><p>Follow the winners through each round to the final.</p></div></div>
+      <div class="bracket-note">Both sides of the tournament move toward the center, where the finalists meet. Select a match to highlight it.</div>
+      <div class="bracket-scroll">
+        <div class="bracket symmetric-bracket">
+          <div class="bracket-side left-side">
+<div class="bracket-round round-32"><h3>Round of 32</h3>
+<button class="match"><span>Canada</span><b>1 – 0</b><span>South Africa</span></button>
+<button class="match"><span>Germany</span><b>1 – 1 (3–4 pens)</b><span>Paraguay</span></button>
+<button class="match"><span>Netherlands</span><b>1 – 1 (2–3 pens)</b><span>Morocco</span></button>
+<button class="match"><span>Brazil</span><b>2 – 1</b><span>Japan</span></button>
+<button class="match"><span>France</span><b>3 – 0</b><span>Sweden</span></button>
+<button class="match"><span>Côte d’Ivoire</span><b>1 – 2</b><span>Norway</span></button>
+<button class="match"><span>Mexico</span><b>2 – 0</b><span>Ecuador</span></button>
+<button class="match"><span>England</span><b>2 – 1</b><span>Congo DR</span></button></div>
+<div class="bracket-round round-16"><h3>Round of 16</h3>
+<button class="match"><span>France</span><b>1 – 0</b><span>Paraguay</span></button>
+<button class="match"><span>Morocco</span><b>3 – 0</b><span>Canada</span></button>
+<button class="match"><span>Norway</span><b>2 – 1</b><span>Brazil</span></button>
+<button class="match"><span>England</span><b>3 – 2</b><span>Mexico</span></button></div>
+<div class="bracket-round quarter-finals"><h3>Quarter-finals</h3>
+<button class="match"><span>Spain</span><b>2 – 1</b><span>Belgium</span></button>
+<button class="match"><span>France</span><b>2 – 0</b><span>Morocco</span></button></div>
+<div class="bracket-round semi-finals"><h3>Semi-finals</h3>
+<button class="match"><span>Spain</span><b>2 – 0</b><span>France</span></button></div>
+          </div>
+          <div class="bracket-center">
+            <div class="bracket-center-label">THE FINAL</div>
+            <div class="trophy">🏆</div>
+            <button class="match champion"><span>Spain</span><b>1 – 0 AET</b><span>Argentina</span></button>
+            <p class="winner-caption">WORLD CHAMPIONS · SPAIN</p>
+            <p class="goal-caption">Ferran Torres · 106'</p>
+            <div class="third-place"><h3>Third-place match</h3><button class="match"><span>England</span><b>6 – 4</b><span>France</span></button></div>
+          </div>
+          <div class="bracket-side right-side">
+<div class="bracket-round semi-finals"><h3>Semi-finals</h3>
+<button class="match"><span>Argentina</span><b>2 – 1</b><span>England</span></button></div>
+<div class="bracket-round quarter-finals"><h3>Quarter-finals</h3>
+<button class="match"><span>England</span><b>2 – 1 AET</b><span>Norway</span></button>
+<button class="match"><span>Argentina</span><b>3 – 1 AET</b><span>Switzerland</span></button></div>
+<div class="bracket-round round-16"><h3>Round of 16</h3>
+<button class="match"><span>Spain</span><b>1 – 0</b><span>Portugal</span></button>
+<button class="match"><span>Belgium</span><b>4 – 1</b><span>USA</span></button>
+<button class="match"><span>Argentina</span><b>3 – 2</b><span>Egypt</span></button>
+<button class="match"><span>Switzerland</span><b>0 – 0 (4–3 pens)</b><span>Colombia</span></button></div>
+<div class="bracket-round round-32"><h3>Round of 32</h3>
+<button class="match"><span>USA</span><b>2 – 0</b><span>Bosnia and Herzegovina</span></button>
+<button class="match"><span>Belgium</span><b>3 – 2 AET</b><span>Senegal</span></button>
+<button class="match"><span>Portugal</span><b>2 – 1</b><span>Croatia</span></button>
+<button class="match"><span>Spain</span><b>3 – 0</b><span>Austria</span></button>
+<button class="match"><span>Switzerland</span><b>2 – 0</b><span>Algeria</span></button>
+<button class="match"><span>Argentina</span><b>3 – 2 AET</b><span>Cabo Verde</span></button>
+<button class="match"><span>Colombia</span><b>1 – 0</b><span>Ghana</span></button>
+<button class="match"><span>Australia</span><b>1 – 1 (2–4 pens)</b><span>Egypt</span></button></div>
+          </div>
+        </div>
+      </div>
+      <p class="small-note">The bracket is a visual summary of the 2026 knockout rounds. AET = after extra time; pens = penalty shoot-out.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner"><a class="logo footer-logo" href="#home"><h2>WorldCup<span>Wiki</span></h2></a><p>Football history. Legendary moments. One beautiful game.</p>
+      <div class="footer-links"><a href="#history">Finals</a><a href="#groups">Groups</a><a href="#bracket">Knockout Bracket</a></div>
+      <small>© 2026 WorldCupWiki · Fan-made educational project</small>
+    </div>
+  </footer>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+  <script src="js/site.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
