@@ -115,17 +115,14 @@ header {
 /* كود انقلاب اللوجو أفقياً من اليمين لليسار */
 .logo img {
     animation: flipHorizontally 3s ease-in-out infinite;
-    /* هذا السطر يضمن أن اللوجو يظل في منتصف مكانه أثناء الانقلاب */
     transform-origin: center; 
 }
 
 @keyframes flipHorizontally {
     0%, 100% {
-        /* الوضع الطبيعي (البدء والنهاية) */
         transform: scaleX(1);
     }
     50% {
-        /* الانقلاب الكامل عند منتصف المدة */
         transform: scaleX(-1);
     }
 }
@@ -275,6 +272,7 @@ h1 {
     color: var(--desc-color);
 }
 
+/* كودك الأصلي تماماً للشاشات الكبيرة */
 .team-card {
     position: relative;
     background: var(--card-bg); 
@@ -299,6 +297,20 @@ h1 {
 .team-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* تعديل بسيط ومخصص فقط للموبايل لمنع تداخل العناصر وخروجها عن الشاشة */
+@media (max-width: 768px) {
+    .team-container {
+        margin-left: 15px;
+        margin-right: 15px;
+        grid-template-columns: 1fr;
+    }
+    .team-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 footer {
