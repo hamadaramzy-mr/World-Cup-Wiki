@@ -303,7 +303,7 @@ h1 {
 
 footer {
     background-color: var(--footer-bg);
-    color: var(--gold-color);
+    color: white;
     text-align: center;
     margin-top: 20px;
     padding: 10px;
