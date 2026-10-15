@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("loaded");
+});
+
+// ---- Mobile hamburger menu ----
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+        const isOpen = navMenu.classList.toggle("open");
+        hamburger.classList.toggle("active", isOpen);
+        hamburger.setAttribute("aria-expanded", isOpen);
+    });
+
+    // Close the menu automatically once a link is picked
+    navMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("open");
+            hamburger.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", "false");
+        });
+    });
+}
+
+// ---- Dark mode toggle (preference saved in localStorage) ----
 const themeToggle = document.getElementById("themeToggle");
 const savedTheme = localStorage.getItem("wc-theme");
 
@@ -21,23 +47,21 @@ if (themeToggle) {
         }
     });
 }
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
+// ---- Reveal elements as they scroll into view ----
+const revealElements = document.querySelectorAll(".reveal");
 
-if (hamburger && navMenu) {
-    hamburger.addEventListener("click", function () {
-        const isOpen = navMenu.classList.toggle("open");
-
-        hamburger.classList.toggle("active", isOpen);
-        hamburger.setAttribute("aria-expanded", isOpen);
-    });
-
-    // Close menu after clicking a link
-    navMenu.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-            navMenu.classList.remove("open");
-            hamburger.classList.remove("active");
-            hamburger.setAttribute("aria-expanded", "false");
+if (revealElements.length && "IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                revealObserver.unobserve(entry.target);
+            }
         });
-    });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+} else {
+    // No IntersectionObserver support (or nothing to reveal) - just show it
+    revealElements.forEach(el => el.classList.add("visible"));
 }
