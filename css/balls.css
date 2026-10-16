@@ -1,35 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-.logo h1 {
-    font-size: 24px;
-    margin: 0;
+:root {
+    --primary-color: #0f2027;
+    --secondary-color: #203a43;
+    --accent-color: #8a2387;
+    --gold-color: #f39c12;
+    --light-color: #f4f7f6;
+    --dark-color: #1a1a1a;
+    --card-bg: #ffffff;
+    --text-muted: #5a6b6e;
+    --live-color: #e74c3c;
+    --success-color: #27ae60;
+    --border-color: #e2e6e5;
+    --shadow-sm: 0 4px 10px rgba(0,0,0,0.06);
+    --shadow-md: 0 10px 25px rgba(0,0,0,0.14);
+    --transition-fast: 0.2s ease;
+    --transition-med: 0.35s ease;
 }
 
-.logo h1 img {
-    display: block;
-    width: 50px;
-    height: auto;
-    margin: 0;
-    border: none;
-    border-radius: 6px;
-}
-
-/* كود انقلاب اللوجو أفقياً من اليمين لليسار */
-.logo img {
-    animation: flipHorizontally 3s ease-in-out infinite;
-    /* هذا السطر يضمن أن اللوجو يظل في منتصف مكانه أثناء الانقلاب */
-    transform-origin: center; 
-}
-
-@keyframes flipHorizontally {
-    0%, 100% {
-        /* الوضع الطبيعي (البدء والنهاية) */
-        transform: scaleX(1);
-    }
-    50% {
-        /* الانقلاب الكامل عند منتصف المدة */
-        transform: scaleX(-1);
-    }
-}
 .filter-buttons.era-filters {
     display: flex;
     flex-wrap: wrap;
@@ -45,7 +33,7 @@
     cursor: pointer;
     border-radius: 20px;
     font-weight: 600;
-    transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+    /* transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast); */
 }
 
 .era-btn:hover {
@@ -54,7 +42,7 @@
 
 .era-btn.active {
     background-color: var(--gold-color);
-    color: #1a1a1a;
+    color: var(--dark-color);
 }
 
 .balls-grid {
@@ -64,6 +52,7 @@
 }
 
 .ball-card {
+    
     position: relative;
     background: var(--card-bg);
     padding: 25px;
@@ -71,6 +60,18 @@
     box-shadow: var(--shadow-sm);
     text-align: center;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ball-card-img{
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-radius: 1rem;
+}
+.ball-card-img img {
+    height: 300px;
+
 }
 
 .ball-card:hover {
@@ -132,30 +133,4 @@
     0% { transform: scale(1); }
     50% { transform: scale(1.15); }
     100% { transform: scale(1); }
-}
-
-@media (max-width: 768px) {
-    .hamburger { display: flex; }
-
-    nav ul#navMenu {
-        position: fixed;
-        top: 68px;
-        right: -100%;
-        flex-direction: column;
-        background: var(--secondary-color);
-        width: 220px;
-        padding: 20px;
-        gap: 4px;
-        border-radius: 0 0 0 12px;
-        box-shadow: var(--shadow-md);
-        transition: right var(--transition-med);
-    }
-
-    nav ul#navMenu.open {
-        right: 0;
-    }
-
-    nav ul#navMenu li {
-        margin: 10px 0;
-    }
 }
