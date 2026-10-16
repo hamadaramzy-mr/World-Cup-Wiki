@@ -18,6 +18,39 @@
     --transition-med: 0.35s ease;
 }
 
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.logo h1 img {
+    display: block;
+    width: 50px;
+    height: auto;
+    margin: 0;
+    border: none;
+    border-radius: 6px;
+}
+
+/* كود انقلاب اللوجو أفقياً من اليمين لليسار */
+.logo img {
+    animation: flipHorizontally 3s ease-in-out infinite;
+    transform-origin: center; 
+}
+
+@keyframes flipHorizontally {
+    0%, 100% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(-1);
+    }
+}
+
+.logo span {
+    color: var(--gold-color);
+}
+
 .filter-buttons.era-filters {
     display: flex;
     flex-wrap: wrap;
